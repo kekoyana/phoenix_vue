@@ -1,0 +1,25 @@
+version: '4.2'
+
+interaction:
+  bash:
+    description: Open the Bash shell in app's container
+    service: app
+    command: bash
+    compose:
+      run_options: [no-deps]
+
+  mix:
+    description: Run mix commands
+    service: app
+    command: mix
+    subcommands:
+      phx.server:
+        description: Run Phoenix server at http://localhost:4000
+        service: app
+        compose:
+          run_options: [service-ports]
+
+provision:
+  - dip compose down --volumes
+  - dip compose up -d db
+  - dip bash -c bin/setup
