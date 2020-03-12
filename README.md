@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/kekoyana/phoenix_vue/tree/master.svg?style=svg)](https://circleci.com/gh/kekoyana/phoenix_vue/tree/master)
+
 # App
 
 To start your Phoenix server:
