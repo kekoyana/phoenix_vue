@@ -7,6 +7,7 @@ services:
       - "${APP_PORT:-4000}:4000"
     volumes:
       - ./:/app:cached
+    command: ["mix", "phx.server"]
     depends_on:
       - db
   db:
