@@ -8,6 +8,7 @@ services:
     volumes:
       - ./:/app:cached
     command: ["mix", "phx.server"]
+    working_dir: ${WORK_DIR:-/app}
     depends_on:
       - db
   db:

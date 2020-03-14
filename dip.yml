@@ -8,6 +8,13 @@ interaction:
     compose:
       run_options: [no-deps]
 
+  yarn:
+    description: Run yarn commands
+    service: app
+    environment:
+      WORK_DIR: /app/assets
+    command: yarn
+
   mix:
     description: Run mix commands
     service: app
