@@ -10,6 +10,7 @@ brew install dip
 ## dip provision
 ```
 dip provision
+```
 
 ## start server
 ```
