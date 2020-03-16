@@ -1,0 +1,50 @@
+<h1>Listing Cards</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Max hp</th>
+      <th>Attack</th>
+      <th>Defence</th>
+      <th>Speed</th>
+      <th>Magic</th>
+      <th>Resist</th>
+      <th>Attribution 1</th>
+      <th>Attribution 2</th>
+      <th>Action 1</th>
+      <th>Action 2</th>
+      <th>Action 3</th>
+      <th>Action 4</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for card <- @cards do %>
+    <tr>
+      <td><%= card.name %></td>
+      <td><%= card.max_hp %></td>
+      <td><%= card.attack %></td>
+      <td><%= card.defence %></td>
+      <td><%= card.speed %></td>
+      <td><%= card.magic %></td>
+      <td><%= card.resist %></td>
+      <td><%= card.attribution_1_id %></td>
+      <td><%= card.attribution_2_id %></td>
+      <td><%= card.action_1_id %></td>
+      <td><%= card.action_2_id %></td>
+      <td><%= card.action_3_id %></td>
+      <td><%= card.action_4_id %></td>
+
+      <td>
+        <span><%= link "Show", to: Routes.card_path(@conn, :show, card) %></span>
+        <span><%= link "Edit", to: Routes.card_path(@conn, :edit, card) %></span>
+        <span><%= link "Delete", to: Routes.card_path(@conn, :delete, card), method: :delete, data: [confirm: "Are you sure?"] %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Card", to: Routes.card_path(@conn, :new) %></span>

@@ -1,0 +1,73 @@
+<h1>Show Card</h1>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @card.name %>
+  </li>
+
+  <li>
+    <strong>Max hp:</strong>
+    <%= @card.max_hp %>
+  </li>
+
+  <li>
+    <strong>Attack:</strong>
+    <%= @card.attack %>
+  </li>
+
+  <li>
+    <strong>Defence:</strong>
+    <%= @card.defence %>
+  </li>
+
+  <li>
+    <strong>Speed:</strong>
+    <%= @card.speed %>
+  </li>
+
+  <li>
+    <strong>Magic:</strong>
+    <%= @card.magic %>
+  </li>
+
+  <li>
+    <strong>Resist:</strong>
+    <%= @card.resist %>
+  </li>
+
+  <li>
+    <strong>Attribution 1:</strong>
+    <%= @card.attribution_1_id %>
+  </li>
+
+  <li>
+    <strong>Attribution 2:</strong>
+    <%= @card.attribution_2_id %>
+  </li>
+
+  <li>
+    <strong>Action 1:</strong>
+    <%= @card.action_1_id %>
+  </li>
+
+  <li>
+    <strong>Action 2:</strong>
+    <%= @card.action_2_id %>
+  </li>
+
+  <li>
+    <strong>Action 3:</strong>
+    <%= @card.action_3_id %>
+  </li>
+
+  <li>
+    <strong>Action 4:</strong>
+    <%= @card.action_4_id %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.card_path(@conn, :edit, @card) %></span>
+<span><%= link "Back", to: Routes.card_path(@conn, :index) %></span>
