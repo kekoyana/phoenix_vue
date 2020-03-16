@@ -9,10 +9,15 @@ config :app, AppWeb.Endpoint,
 # Print only warnings and errors during test
 config :logger, level: :warn
 
+database = case System.get_env("CIRCLECI") do
+  nil -> "db"
+  _ -> "localhost"
+end
+
 # Configure your database
 config :app, App.Repo,
   username: "postgres",
-  password: "postgres",
+  password: "",
   database: "app_test",
-  hostname: "localhost",
+  hostname: database,
   pool: Ecto.Adapters.SQL.Sandbox
