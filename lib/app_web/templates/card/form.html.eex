@@ -1,0 +1,63 @@
+<%= form_for @changeset, @action, fn f -> %>
+  <%= if @changeset.action do %>
+    <div class="alert alert-danger">
+      <p>Oops, something went wrong! Please check the errors below.</p>
+    </div>
+  <% end %>
+
+  <%= label f, :name %>
+  <%= text_input f, :name %>
+  <%= error_tag f, :name %>
+
+  <%= label f, :max_hp %>
+  <%= number_input f, :max_hp %>
+  <%= error_tag f, :max_hp %>
+
+  <%= label f, :attack %>
+  <%= number_input f, :attack %>
+  <%= error_tag f, :attack %>
+
+  <%= label f, :defence %>
+  <%= number_input f, :defence %>
+  <%= error_tag f, :defence %>
+
+  <%= label f, :speed %>
+  <%= number_input f, :speed %>
+  <%= error_tag f, :speed %>
+
+  <%= label f, :magic %>
+  <%= number_input f, :magic %>
+  <%= error_tag f, :magic %>
+
+  <%= label f, :resist %>
+  <%= number_input f, :resist %>
+  <%= error_tag f, :resist %>
+
+  <%= label f, :attribution_1_id %>
+  <%= number_input f, :attribution_1_id %>
+  <%= error_tag f, :attribution_1_id %>
+
+  <%= label f, :attribution_2_id %>
+  <%= number_input f, :attribution_2_id %>
+  <%= error_tag f, :attribution_2_id %>
+
+  <%= label f, :action_1_id %>
+  <%= number_input f, :action_1_id %>
+  <%= error_tag f, :action_1_id %>
+
+  <%= label f, :action_2_id %>
+  <%= number_input f, :action_2_id %>
+  <%= error_tag f, :action_2_id %>
+
+  <%= label f, :action_3_id %>
+  <%= number_input f, :action_3_id %>
+  <%= error_tag f, :action_3_id %>
+
+  <%= label f, :action_4_id %>
+  <%= number_input f, :action_4_id %>
+  <%= error_tag f, :action_4_id %>
+
+  <div>
+    <%= submit "Save" %>
+  </div>
+<% end %>

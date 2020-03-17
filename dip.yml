@@ -8,6 +8,11 @@ interaction:
     compose:
       run_options: [no-deps]
 
+  db:
+    description: Connection Database
+    service: db
+    command: psql postgres://postgres:@db:5432
+
   yarn:
     description: Run yarn commands
     service: app
